@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 77377,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "3d7598ee5a99a29ff963e4e4cbb6588a4709258edd552feb4707deb731027c42"
+    },
+    "source": {
+      "bytes": 18540,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "3348000be59f47cf185efbb70419f585656f0bd3a2a9746f7fa173b0a4f4cc52"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We refute the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga (arXiv:2605.29436v1, Section III.A.2, Eq. (22) with p=1; (T4) in Section II.B, Eqs. (7)–(8)), where “a proof is left open.” An explicit SU(2)-covariant channel decreases the order-seven anticoherence of a mixed spin-four state by exactly 95/90552, disproving the universal validity suggested by their reported numerical evidence. The channel is a normalized sum of quadrupole Kraus operations; its covariance and trace preservation follow from Cartesian tensor identities. Both reduced states are diagonal, so the strict inequality reduces to rational arithmetic. We reconstruct an existing spin-four witness and give a self-contained exact counterexample within the full mixed-state domain of the proposed axiom.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23884884",
+    "current_version": 4,
+    "doi": "10.5281/zenodo.23884885",
+    "lean_source": {
+      "revision": "d1876cfbbef8c13023311126691b180eefa69569",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/d1876cfbbef8c13023311126691b180eefa69569/D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance/files/pdf?version=4"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:22.756623726Z",
+    "record": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance",
+    "repository_name": "6aec384a764faffa93fead3c",
+    "source": {
+      "url": "/api/v1/collected-papers/denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance/files/source?version=4"
+    },
+    "title": "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:22.756623726Z",
+        "revision": "4",
+        "version": 4
+      }
+    ],
+    "work": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance"
+  }
+}

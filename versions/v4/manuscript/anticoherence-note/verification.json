@@ -1,0 +1,60 @@
+{
+  "status": "all assertions passed",
+  "arithmetic": "exact fractions; no floating point",
+  "matrix_units_checked": 81,
+  "infinitesimal_covariance_identities": 243,
+  "trace_preservation_identities": 81,
+  "unitality": true,
+  "quadrupole_metric_adjoint_identities": 729,
+  "input_density": [
+    "209/1764",
+    "23/441",
+    "20/63",
+    "0",
+    "1/4",
+    "0",
+    "1/6",
+    "2/21",
+    "0"
+  ],
+  "output_density": [
+    "398/3465",
+    "215/1386",
+    "3191/24255",
+    "1461/21560",
+    "23/98",
+    "3/55",
+    "587/4620",
+    "79/1320",
+    "3/55"
+  ],
+  "input_reduction": [
+    "1/8",
+    "1/8",
+    "5/21",
+    "1/8",
+    "1/8",
+    "1/8",
+    "1/8",
+    "1/84"
+  ],
+  "output_reduction": [
+    "827/6160",
+    "661/3920",
+    "12841/103488",
+    "787/4928",
+    "653/4312",
+    "713/6160",
+    "2073/24640",
+    "131/2112"
+  ],
+  "input_trace_norm": "19/84",
+  "output_trace_norm": "3933/17248",
+  "trace_norm_increase": "95/51744",
+  "normalizer": "7/4",
+  "anticoherence_decrease": "95/90552",
+  "input_anticoherence": "128/147",
+  "output_anticoherence": "26251/30184",
+  "verification_scope": "Finite exact matrix identities plus the analytic proof in note.tex.",
+  "checker_sha256": "8ddaa3f20d0ae4deabe7351c212c08ff7cc4b93ae04de277ff3ed42b244490b1"
+}

@@ -1,0 +1,332 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathbf{1}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\normone}[1]{\left\lVert #1\right\rVert_1}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ens\'astiga}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{1 November 2026\\\small Licensed under
+\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}}
+\hypersetup{pdfauthor={Haobo Ma; Wenlin Zhang},
+pdftitle={Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensastiga},
+pdfsubject={Mixed-state anticoherence; CC BY 4.0}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We refute the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and
+Serrano-Ens\'astiga~\cite[Sec.~III.A.2, Eq.~(22) with $p=1$; (T4) in
+Sec.~II.B, Eqs.~(7)--(8)]{DLMS}, where ``a proof is left open.''
+An explicit SU(2)-covariant channel decreases the order-seven anticoherence of
+a mixed spin-four state by exactly $95/90552$, disproving the universal
+validity suggested by their reported numerical evidence.
+The channel is a normalized sum of quadrupole Kraus operations;
+its covariance and trace preservation follow from Cartesian tensor identities.
+Both reduced states are diagonal, so the strict inequality reduces to rational
+arithmetic. We reconstruct an existing spin-four witness and give a self-contained
+exact counterexample within the full mixed-state domain of the proposed axiom.
+\end{abstract}
+
+\section{The question and the witness}
+Immediately after Proposition~2 in Sec.~III.A.2 of arXiv:2605.29436v1,
+Denis, Lacaille, Martin and Serrano-Ens\'astiga~\cite{DLMS} report numerical
+evidence for the trace-distance case of (T4) and state that
+``a proof is left open.'' The proposed monotonicity is
+$\A_t^{T,d_1}(\Phi(\rho))\geq\A_t^{T,d_1}(\rho)$ for every
+SU(2)-covariant completely positive trace-preserving map $\Phi$
+(Definition~2, Sec.~II.B, Eqs.~(7)--(8)). We refute it for a mixed state with
+$j=4$ and $t=7$.
+The mixed-state definition permits $1\leq t\leq N=2j$; the usual restriction
+$t\leq N/2$ when discussing pure states does not restrict the mixed-state axiom.
+Pure-state measures are treated in~\cite{BM}; general equivariant spin
+channels are studied in~\cite{ARS}. The calculation below uses no
+classification theorem.
+
+Identify the spin-$N/2$ space with the symmetric subspace of $N$ qubits, using
+the normalized Dicke basis $\{|D_N^r\rangle:0\leq r\leq N\}$,
+where $r$ counts qubits in state $1$. Let $\rho_t$ denote the ordinary
+partial trace over $N-t$ qubits, expressed in its normalized Dicke basis.
+With the source's unhalved trace norm, define
+\begin{equation}\label{eq:measure}
+ \A_t^{T,d_1}(\rho)=1-
+ \frac{\normone{\rho_t-\id/(t+1)}}{K_t},\qquad
+ K_t=\max_{\sigma\geq0,\,\Tr\sigma=1}
+ \normone{\sigma-\id/(t+1)}=\frac{2t}{t+1}.
+\end{equation}
+For the last equality, diagonalize $\sigma$ and express its eigenvalue vector
+as a convex combination of the vertices of the probability simplex.
+Convexity of the $\ell^1$ norm bounds the distance by its value at a vertex,
+$2t/(t+1)$, and every vertex attains this value. Including a factor $1/2$
+in both distance and $K_t$ leaves the measure unchanged.
+
+The channel acts on the nine-dimensional irreducible spin-four space;
+the eight-qubit embedding defines the reductions, not a tensor-product
+noise model. Use the order $r=0,\ldots,8$, so $m=4-r$. Put
+\begin{align}
+ J_z|r\rangle&=(4-r)|r\rangle,&
+ J_+|r\rangle&=\sqrt{r(9-r)}|r-1\rangle,\nonumber\\
+ J_-&=J_+^\dagger,& J_x&=(J_++J_-)/2,\nonumber\\
+ J_y&=(J_+-J_-)/(2i).&&\label{eq:spin}
+\end{align}
+Set $Q_{ab}=\frac12(J_aJ_b+J_bJ_a)-\frac{20}{3}\delta_{ab}\id$
+for $a,b\in\{x,y,z\}$, and define
+\begin{equation}\label{eq:channel}
+ \Phi(X)=\frac3{770}\sum_{a,b}Q_{ab}XQ_{ab},\qquad
+ \rho=\frac1{1764}\operatorname{diag}(209,92,560,0,441,0,294,168,0).
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+The map $\Phi$ in~\eqref{eq:channel} is completely positive, trace preserving
+and SU(2)-covariant. The state $\rho$ is a mixed density operator, and
+\[
+ \A_7^{T,d_1}(\Phi(\rho))-\A_7^{T,d_1}(\rho)
+ =-\frac{95}{90552}<0.
+\]
+Thus this candidate fails (T4) on the full mixed-state domain.
+\end{theorem}
+
+\section{An admissible covariant channel}
+The $J_a$ are Hermitian, satisfy $[J_a,J_b]=i\sum_c\epsilon_{abc}J_c$,
+and have Casimir $\sum_aJ_a^2=C\id$ with $C=20$.
+Consequently every $Q_{ab}$ is Hermitian and $\sum_a Q_{aa}=0$.
+The Kraus operators $\sqrt{3/770}\,Q_{ab}$ give complete positivity.
+We verify their normalization rather than assuming it from covariance.
+
+\begin{lemma}\label{lem:normalization}
+For spin Casimir $C$, set $S_{ab}=(J_aJ_b+J_bJ_a)/2$ and
+$Q_{ab}=S_{ab}-(C/3)\delta_{ab}\id$. Then
+$\sum_{a,b}Q_{ab}^2=C(4C-3)\id/6$.
+\end{lemma}
+\begin{proof}
+The commutator relations give
+$\sum_a[J_a,[J_a,J_b]]=2J_b$. Expanding the double commutator yields
+$\sum_aJ_aJ_bJ_a=(C-1)J_b$.
+For $S_{ab}=(J_aJ_b+J_bJ_a)/2$, expansion of the four products gives
+\[
+ \sum_{a,b}S_{ab}^2
+ =\tfrac12\sum_{a,b}(J_aJ_bJ_aJ_b+J_aJ_b^2J_a)
+ =\tfrac12\bigl(C(C-1)+C^2\bigr)\id.
+\]
+Since $\sum_aS_{aa}=C\id$, subtracting the scalar trace part gives
+$\sum Q_{ab}^2=(C^2-C/2-C^2/3)\id$, as asserted.
+For $C=20$ this is $(770/3)\id$; hence the Kraus sum is the identity
+and $\Phi$ is trace preserving. It is also unital.
+\end{proof}
+
+For any spin-four rotation $U$, there is a real orthogonal matrix $R$ with
+$UJ_aU^\dagger=\sum_cR_{ac}J_c$. Therefore
+\[
+ UQ_{ab}U^\dagger=\sum_{c,d}R_{ac}R_{bd}Q_{cd}.
+\]
+Substitution into $U\Phi(X)U^\dagger$ and summation using
+$\sum_aR_{ac}R_{ae}=\delta_{ce}$ gives
+$U\Phi(X)U^\dagger=\Phi(UXU^\dagger)$ for every matrix $X$.
+This proves covariance for every SU(2) rotation, not just a finite sample.
+
+\section{Exact output and partial traces}
+For an explicit sparse evaluation of~\eqref{eq:channel}, set $c=\sqrt{3/3080}$.
+The same channel has the following five Kraus operators:
+\begin{align}\label{eq:kraus}
+ L_0&=(3J_z^2-20\id)/\sqrt{1540},\nonumber\\
+ L_{+1}&=-c(J_zJ_++J_+J_z),&L_{-1}&=c(J_zJ_-+J_-J_z),\nonumber\\
+ L_{+2}&=cJ_+^2,&L_{-2}&=cJ_-^2.
+\end{align}
+To check the equality of channels, use
+$Q_{xx}+Q_{yy}=-Q_{zz}$ and write
+$J_zJ_\pm+J_\pm J_z=2(Q_{xz}\pm iQ_{yz})$ and
+$J_\pm^2=Q_{xx}-Q_{yy}\pm2iQ_{xy}$.
+For Hermitian $A,B$, the cancellation identity is
+\[
+ (A+iB)X(A-iB)+(A-iB)X(A+iB)=2AXA+2BXB.
+\]
+Apply it with $(A,B)=(Q_{xz},Q_{yz})$ and
+$(A,B)=(Q_{xx}-Q_{yy},2Q_{xy})$. Also, with $D=Q_{xx}-Q_{yy}$,
+\[
+ Q_{xx}XQ_{xx}+Q_{yy}XQ_{yy}
+ =\tfrac12(DXD+Q_{zz}XQ_{zz}).
+\]
+The remaining
+coefficients of $Q_{zz}XQ_{zz}$, $(Q_{xx}-Q_{yy})X(Q_{xx}-Q_{yy})$,
+and each off-diagonal $Q_{ab}XQ_{ab}$ are respectively
+$9/1540$, $3/1540$ and $3/385$, exactly those in~\eqref{eq:channel}.
+
+For completeness, each input column of~\eqref{eq:kraus} has just one possible
+output. At magnetization $m=4-r$, its squared amplitudes and output shifts are
+\begin{center}\small
+\begin{tabular}{ccl}
+\toprule
+Operator & Output index & Squared amplitude\\
+\midrule
+$L_0$ & $r$ & $(3m^2-20)^2/1540$\\
+$L_{+1}$ & $r-1$ & $3(2m+1)^2[20-m(m+1)]/3080$\\
+$L_{-1}$ & $r+1$ & $3(2m-1)^2[20-m(m-1)]/3080$\\
+$L_{+2}$ & $r-2$ & $3[20-m(m+1)][20-(m+1)(m+2)]/3080$\\
+$L_{-2}$ & $r+2$ & $3[20-m(m-1)][20-(m-1)(m-2)]/3080$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Out-of-range amplitudes vanish. Applying these weights to the probabilities
+in~\eqref{eq:channel} gives
+\begin{equation}\label{eq:output}
+ \Phi(\rho)=\frac1{194040}\operatorname{diag}
+ (22288,30100,25528,13149,45540,10584,24654,11613,10584).
+\end{equation}
+The input entries are nonnegative and sum to one, with more than one nonzero
+entry, proving that $\rho$ is a mixed density operator.
+
+The normalized Dicke splitting identity is
+\[
+ |D_N^r\rangle=\sum_k
+ \sqrt{\frac{\binom tk\binom{N-t}{r-k}}{\binom Nr}}
+ |D_t^k\rangle\otimes|D_{N-t}^{r-k}\rangle.
+\]
+It follows by grouping computational-basis strings by their first-block
+weight; the coefficient counts $\binom tk\binom{N-t}{r-k}$ strings out of
+$\binom Nr$. Thus the reduction of $\operatorname{diag}(p_r)$ is diagonal with
+entries
+\[
+ p^{(t)}_k=\sum_r p_r\frac{\binom tk\binom{N-t}{r-k}}{\binom Nr},
+\]
+taking binomial coefficients outside their range as zero. In particular,
+for $N=8,t=7$,
+\begin{equation}\label{eq:reduction}
+ p^{(7)}_k=\frac{8-k}{8}p_k+\frac{k+1}{8}p_{k+1}\quad(0\leq k\leq7).
+\end{equation}
+Applying this formula to the input and output gives
+\begin{align}\label{eq:marginals}
+ \rho_7&=\frac1{168}\operatorname{diag}(21,21,40,21,21,21,21,2),\nonumber\\
+ [\Phi(\rho)]_7&=\frac1{517440}\operatorname{diag}
+ (69468,87252,64205,82635,78360,59892,43533,32095).
+\end{align}
+Since $\id/8$ corresponds to $21/168$ or $64680/517440$ in these rows,
+respectively, summing absolute deviations gives
+\begin{align*}
+ \normone{\rho_7-\id/8}&=\frac{38}{168}=\frac{19}{84},\\
+ \normone{[\Phi(\rho)]_7-\id/8}
+ &=\frac{117990}{517440}=\frac{3933}{17248}.
+\end{align*}
+Their difference is $95/51744$. Dividing by $K_7=7/4$ in
+\eqref{eq:measure} proves Theorem~\ref{thm:main}.
+
+\section{Consequences and sibling candidates}
+\paragraph{Mechanism.}
+For a convex mixture of rotations, the partial trace intertwines each
+collective rotation with its action on the retained qubits. Convexity and
+unitary invariance of the trace norm then force the reduced distance to
+decrease. The witness consequently lies outside that subclass of covariant
+channels. Covariance on the original spin sector alone does not supply a
+trace-norm contraction on the reduced sector.
+
+At the full order $t=N$, by contrast, trace-distance (T4) always holds.
+Indeed covariance makes $\Phi(\id/(N+1))$ invariant, hence equal to
+$\id/(N+1)$ by irreducibility and trace preservation. For Hermitian $X$,
+write $X=X_+-X_-$ with $X_\pm\geq0$. Positivity and trace preservation give
+$\normone{\Phi(X)}\leq\Tr\Phi(X_+)+\Tr\Phi(X_-)=\normone{X}$.
+Apply this with $X=\rho-\id/(N+1)$ in~\eqref{eq:measure}.
+
+\paragraph{The convex-roof construction.}
+Proposition~6 of~\cite[Sec.~III.B.2]{DLMS} assumes that the associated total
+quantity satisfies the total-measure axioms. Theorem~\ref{thm:main} disproves
+that hypothesis for $d_1$ on the full mixed-state domain. Consequently that
+proposition cannot be applied generally to $d_1$ as a valid total--quantum
+pair. This is a failure of its hypothesis, not a refutation of the conditional
+proposition or a separate disproof of the quantum-side axioms.
+
+\paragraph{Fidelity and other orders.}
+The fidelity candidate in~\cite[Sec.~III.A.3, Eq.~(26)]{DLMS} is
+\[
+ \A_t^{T,F}(\sigma)=\frac{(\Tr\sqrt{\sigma_t})^2-1}{t}.
+\]
+Its (T4) remains open in that source, including the restatement in
+Proposition~7 (Sec.~III.B.3). Our witness does not refute it.
+\begin{proposition}
+For the state and channel in~\eqref{eq:channel}, the fidelity candidate
+strictly increases at every $t=1,\ldots,8$. The trace-distance candidate
+strictly increases for $t=1,\ldots,6,8$ and decreases for $t=7$.
+\end{proposition}
+\begin{proof}
+Table~\ref{tab:siblings} gives the changes, always output minus input.
+\begin{table}[ht]
+\centering
+\begin{tabular}{rcc}
+\toprule
+$t$ & $\Delta\A_t^{T,d_1}$ (exact) & $10^6\Delta\A_t^{T,F}$ (lower bound)\\
+\midrule
+1 & $19/784$ & $3663$\\
+2 & $4275/120736$ & $8574$\\
+3 & $2831/75460$ & $13085$\\
+4 & $4959/241472$ & $18296$\\
+5 & $741/75460$ & $26268$\\
+6 & $19/2464$ & $38910$\\
+7 & $-95/90552$ & $62258$\\
+8 & $3889/17248$ & $365375$\\
+\bottomrule
+\end{tabular}
+\caption{Exact trace changes and certified rational fidelity bounds for this witness.}
+\label{tab:siblings}
+\end{table}
+
+Here is a finite exact certificate procedure for the table. Compute every
+diagonal reduction by the binomial formula above. The trace column is then
+rational arithmetic. For a reduced probability $p$, set $s=10^{15}$ and
+$n(p)=\lfloor\sqrt{\lfloor s^2p\rfloor}\rfloor$. Integer arithmetic gives
+$n(p)^2\leq s^2p<(n(p)+1)^2$, so
+$n(p)/s\leq\sqrt p<(n(p)+1)/s$.
+Sum these lower and upper bounds to obtain $L_\sigma\leq
+\Tr\sqrt{\sigma_t}<U_\sigma$ for each of the input and output.
+Both sums are nonnegative; therefore
+\[
+ \Delta\A_t^{T,F}\geq
+ \frac{L_{\Phi(\rho)}^2-U_\rho^2}{t}.
+\]
+Substitution yields a rational bound no smaller than each displayed integer
+divided by $10^6$: the displayed integer is the floor of $10^6$ times this
+certified bound, not a rounded estimate of the true change.
+The accompanying \texttt{siblings.py} and
+\texttt{siblings.json} supply the reductions and exact bounds for all eight
+rows; no floating-point sign test is used.
+\end{proof}
+
+\paragraph{Remaining questions.}
+The universal fidelity-based (T4) is not settled here. Nor does this calculation
+settle trace-distance (T4) for mixed states restricted to $t\leq N/2$, or
+trace-distance (T4) on pure inputs, in particular in the usual range
+$t\leq N/2$. For arbitrary mixed-state witnesses with $1\leq t\leq2j$,
+the minimum spin admitting a violation and then the minimum order at that
+spin are not determined. The existence and corresponding minimum spin/order
+for pure-input violations with $t\leq j$ are separate questions.
+The proved purity and Hilbert--Schmidt constructions in
+Propositions~1--2 of~\cite{DLMS} are not contradicted by this result.
+
+\paragraph{Attribution.}
+The state and channel are reconstructed from
+\href{https://github.com/the-omega-institute/trureturing/blob/d1876cfbbef8c13023311126691b180eefa69569/D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.lean}{the pinned upstream Lean source},
+where the declaration \texttt{result} states the failure of the mixed-state
+claim. The argument here supplies a direct Cartesian-tensor proof and exact
+reduced-state calculation of that witness, rather than a different example.
+
+\begin{thebibliography}{3}
+\bibitem{DLMS}
+J. Denis, T. Lacaille, J. Martin and E. Serrano-Ens\'astiga,
+\emph{Total, quantum, and classical measures of anticoherence for mixed spin
+states}, arXiv:2605.29436v1 (2026), Secs.~II.B, III.A.2--3 and III.B.2--3.
+\href{https://doi.org/10.48550/arXiv.2605.29436}{doi:10.48550/arXiv.2605.29436}.
+\bibitem{BM}
+D. Baguette and J. Martin, \emph{Anticoherence measures for pure spin states},
+Phys. Rev. A \textbf{96}, 032304 (2017).
+\href{https://doi.org/10.1103/PhysRevA.96.032304}{doi:10.1103/PhysRevA.96.032304}.
+\bibitem{ARS}
+T. Aschieri, B. Ruba and J. P. Solovej,
+\emph{SU(2)-equivariant quantum channels: semiclassical analysis},
+Commun. Math. Phys. \textbf{405}, 298 (2024).
+\href{https://doi.org/10.1007/s00220-024-05178-1}{doi:10.1007/s00220-024-05178-1}.
+\end{thebibliography}
+\end{document}

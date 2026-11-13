@@ -1,0 +1,188 @@
+{
+  "status": "all assertions passed",
+  "root_scale": "10**15",
+  "arithmetic": "exact rational square-root enclosures using integer isqrt",
+  "output_precision": "Exact interval endpoints rounded outward to multiples of 10**-6.",
+  "formula": "A_F=(sum(sqrt(p_k))**2-1)/t; trace change is output minus input",
+  "scope": "This one mixed-state witness at every t=1,...,8; not a universal fidelity theorem.",
+  "shared_dependency": "Dicke binomial reductions from verify.py",
+  "rows": [
+    {
+      "t": 1,
+      "input_reduction": [
+        "683/1176",
+        "493/1176"
+      ],
+      "output_reduction": [
+        "2675/4704",
+        "2029/4704"
+      ],
+      "trace_anticoherence_change": "19/784",
+      "fidelity_change_lower_bound": "3663/1000000",
+      "fidelity_change_upper_bound": "229/62500",
+      "fidelity_displayed_lower_bound": "3663/1000000"
+    },
+    {
+      "t": 2,
+      "input_reduction": [
+        "683/1764",
+        "683/1764",
+        "199/882"
+      ],
+      "output_reduction": [
+        "105011/271656",
+        "197881/543312",
+        "135409/543312"
+      ],
+      "trace_anticoherence_change": "4275/120736",
+      "fidelity_change_lower_bound": "4287/500000",
+      "fidelity_change_upper_bound": "343/40000",
+      "fidelity_displayed_lower_bound": "4287/500000"
+    },
+    {
+      "t": 3,
+      "input_reduction": [
+        "83/294",
+        "185/588",
+        "313/1176",
+        "23/168"
+      ],
+      "output_reduction": [
+        "522737/1811040",
+        "532009/1811040",
+        "114349/452760",
+        "149449/905520"
+      ],
+      "trace_anticoherence_change": "2831/75460",
+      "fidelity_change_lower_bound": "2617/200000",
+      "fidelity_change_upper_bound": "6543/500000",
+      "fidelity_displayed_lower_bound": "2617/200000"
+    },
+    {
+      "t": 4,
+      "input_reduction": [
+        "1271/5880",
+        "389/1470",
+        "683/2940",
+        "1/5",
+        "73/840"
+      ],
+      "output_reduction": [
+        "207191/905520",
+        "21671/90552",
+        "12934/56595",
+        "6957/37730",
+        "107707/905520"
+      ],
+      "trace_anticoherence_change": "4959/241472",
+      "fidelity_change_lower_bound": "2287/125000",
+      "fidelity_change_upper_bound": "18297/1000000",
+      "fidelity_displayed_lower_bound": "2287/125000"
+    },
+    {
+      "t": 5,
+      "input_reduction": [
+        "607/3528",
+        "389/1764",
+        "389/1764",
+        "1/6",
+        "1/6",
+        "3/56"
+      ],
+      "output_reduction": [
+        "409309/2173248",
+        "5711/28224",
+        "210383/1086624",
+        "67835/362208",
+        "99133/724416",
+        "3159/34496"
+      ],
+      "trace_anticoherence_change": "741/75460",
+      "fidelity_change_lower_bound": "6567/250000",
+      "fidelity_change_upper_bound": "26269/1000000",
+      "fidelity_displayed_lower_bound": "6567/250000"
+    },
+    {
+      "t": 6,
+      "input_reduction": [
+        "1/7",
+        "103/588",
+        "263/1176",
+        "1/7",
+        "1/7",
+        "1/7",
+        "5/168"
+      ],
+      "output_reduction": [
+        "23897/150920",
+        "325961/1811040",
+        "56893/362208",
+        "10733/60368",
+        "8909/60368",
+        "9071/86240",
+        "19157/258720"
+      ],
+      "trace_anticoherence_change": "19/2464",
+      "fidelity_change_lower_bound": "3891/100000",
+      "fidelity_change_upper_bound": "38911/1000000",
+      "fidelity_displayed_lower_bound": "3891/100000"
+    },
+    {
+      "t": 7,
+      "input_reduction": [
+        "1/8",
+        "1/8",
+        "5/21",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/84"
+      ],
+      "output_reduction": [
+        "827/6160",
+        "661/3920",
+        "12841/103488",
+        "787/4928",
+        "653/4312",
+        "713/6160",
+        "2073/24640",
+        "131/2112"
+      ],
+      "trace_anticoherence_change": "-95/90552",
+      "fidelity_change_lower_bound": "31129/500000",
+      "fidelity_change_upper_bound": "62259/1000000",
+      "fidelity_displayed_lower_bound": "31129/500000"
+    },
+    {
+      "t": 8,
+      "input_reduction": [
+        "209/1764",
+        "23/441",
+        "20/63",
+        "0",
+        "1/4",
+        "0",
+        "1/6",
+        "2/21",
+        "0"
+      ],
+      "output_reduction": [
+        "398/3465",
+        "215/1386",
+        "3191/24255",
+        "1461/21560",
+        "23/98",
+        "3/55",
+        "587/4620",
+        "79/1320",
+        "3/55"
+      ],
+      "trace_anticoherence_change": "3889/17248",
+      "fidelity_change_lower_bound": "2923/8000",
+      "fidelity_change_upper_bound": "5709/15625",
+      "fidelity_displayed_lower_bound": "2923/8000"
+    }
+  ],
+  "checker_sha256": "3947dfe198e90319222ba573bdbe7002d6baf2d6082eb2e9c441b551a21c5cdb"
+}

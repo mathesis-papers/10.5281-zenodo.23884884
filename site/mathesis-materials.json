@@ -1,0 +1,14 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance",
+  "version": 4,
+  "repository_url": "https://github.com/mathesis-papers/6aec384a764faffa93fead3c",
+  "site_url": "https://papers.trureturing.org/6aec384a764faffa93fead3c/",
+  "doi": "10.5281/zenodo.23884885",
+  "reading": {
+    "en": "https://papers.trureturing.org/6aec384a764faffa93fead3c/en/",
+    "zh": "https://papers.trureturing.org/6aec384a764faffa93fead3c/zh/"
+  },
+  "slides": [],
+  "visualizations": []
+}

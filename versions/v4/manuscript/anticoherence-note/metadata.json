@@ -1,0 +1,23 @@
+{
+  "id": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance",
+  "revision": 4,
+  "problem_ids": [
+    "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance"
+  ],
+  "topic": "Failure of mixed-state trace-distance anticoherence monotonicity under SU(2)-covariant channels at spin four and order seven",
+  "title": "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga",
+  "creators": [
+    {
+      "name": "Ma, Haobo",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Zhang, Wenlin",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "We refute the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga (arXiv:2605.29436v1, Section III.A.2, Eq. (22) with p=1; (T4) in Section II.B, Eqs. (7)–(8)), where “a proof is left open.” An explicit SU(2)-covariant channel decreases the order-seven anticoherence of a mixed spin-four state by exactly 95/90552, disproving the universal validity suggested by their reported numerical evidence. The channel is a normalized sum of quadrupole Kraus operations; its covariance and trace preservation follow from Cartesian tensor identities. Both reduced states are diagonal, so the strict inequality reduces to rational arithmetic. We reconstruct an existing spin-four witness and give a self-contained exact counterexample within the full mixed-state domain of the proposed axiom.",
+  "summary": "A complete proof reconstructs the attributed mixed-spin trace-distance counterexample. Certified sibling calculations show fidelity anticoherence increases for the same witness at all t=1,...,8; trace anticoherence increases at t=1,...,6,8. Proposition 6 cannot apply generally to trace distance because its total-measure hypothesis fails. Universal fidelity monotonicity, mixed inputs restricted to t<=N/2, pure-input behavior, and minimum spin/order are not settled.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/d1876cfbbef8c13023311126691b180eefa69569/D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.lean"
+}

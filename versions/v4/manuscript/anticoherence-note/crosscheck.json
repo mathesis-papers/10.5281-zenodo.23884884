@@ -1,0 +1,13 @@
+{
+  "status": "all assertions passed",
+  "arithmetic": "exact fractions",
+  "five_vs_nine_kraus_matrix_identities": 81,
+  "five_kraus_completeness": true,
+  "enumerated_bitstrings_per_state": 256,
+  "states_reduced_by_enumeration": 2,
+  "input_trace_norm": "19/84",
+  "output_trace_norm": "3933/17248",
+  "anticoherence_decrease": "95/90552",
+  "independence_scope": "Distinct five-Kraus and bitstring formulations; matrix primitives shared with verify.py.",
+  "checker_sha256": "b429cc88da69b733729d2fa1e40f1f95f4bb05276a26a7ef29d2a2cf6de31648"
+}
