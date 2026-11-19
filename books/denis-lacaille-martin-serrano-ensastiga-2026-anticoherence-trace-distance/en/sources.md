@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # Sources and contributions
 
 This book explains version 4 of the public paper by Haobo Ma and Wenlin Zhang: [exact-version DOI 10.5281/zenodo.23884885](https://doi.org/10.5281/zenodo.23884885). The [concept DOI 10.5281/zenodo.23884884](https://doi.org/10.5281/zenodo.23884884) groups versions. The paper and this explanation are provided under CC BY 4.0. Haobo Ma is affiliated with Chrono AI, Singapore; Wenlin Zhang with the National University of Singapore and Chrono AI, Singapore.

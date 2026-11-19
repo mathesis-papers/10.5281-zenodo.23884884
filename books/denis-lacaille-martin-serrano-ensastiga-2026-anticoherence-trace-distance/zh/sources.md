@@ -1,5 +1,3 @@
-<style>pre:has(> code[class*="typst"]) { display: none; }</style>
-
 # 来源与参与
 
 本书解释 Haobo Ma 与 Wenlin Zhang 的公开论文第 4 版：[精确版本 DOI：10.5281/zenodo.23884885](https://doi.org/10.5281/zenodo.23884885)。概念 DOI [10.5281/zenodo.23884884](https://doi.org/10.5281/zenodo.23884884) 聚合各版本。论文及本书按 CC BY 4.0 提供。Haobo Ma 的机构为 Chrono AI（新加坡）；Wenlin Zhang 的机构为新加坡国立大学与 Chrono AI（新加坡）。
