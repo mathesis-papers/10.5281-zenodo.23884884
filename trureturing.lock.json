@@ -1,0 +1,17 @@
+{
+  "schema": "trureturing-books.lock.v1",
+  "repo": "the-omega-institute/trureturing",
+  "branch": "dev",
+  "commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+  "pinned_at": "2026-11-08T12:32:04Z",
+  "declarations": {
+    "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.result": {
+      "module": "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation",
+      "name": "D5.S3.Quantum.Measurement.AnticoherenceTraceDistanceRefutation.result",
+      "kind": "theorem",
+      "statement_id": "sha256:a1a8939fcf45c826028438c09d655735f2ee0aabe7f9adcfdf4a88f8ff40fb40",
+      "line": 984,
+      "signature": "theorem result : ¬ claim"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[book]
+version = "4"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-05"
+[book.title]
+zh = "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga"
+en = "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga"
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance"
+version = 4
+source_title = "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga"

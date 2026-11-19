@@ -1,0 +1,197 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Symmetric noise and a seven-qubit counterexample}
+\author{Haobo Ma \and Wenlin Zhang}
+\begin{document}
+% Manuscript: title and exact version DOI
+\begin{frame}
+\titlepage
+\note{Paper version 4, DOI 10.5281/zenodo.23884885. The title concerns the trace-distance candidate on the mixed-state domain.}
+\end{frame}
+% Manuscript: Sections 1--4
+\begin{frame}{Route}
+\tableofcontents
+\note{Begin with the question and probabilities, construct the channel and counterexample, then delimit the conclusion.}
+\end{frame}
+\section{Question}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{A small decrease defeats a universal rule}
+\begin{itemize}
+\item Must rotation-respecting noise make a state more directionless?
+\item For the trace-distance score, the answer is no.
+\item A mixed spin-four state, retaining seven qubits:
+\end{itemize}
+\[A_7(\Phi(\rho))-A_7(\rho)=-\frac{95}{90552}<0.\]
+\small Haobo Ma and Wenlin Zhang, paper version 4.
+\note{Give the question and answer first. Even a small strictly negative value disproves a universal inequality. The input is mixed and order seven belongs to the full mixed-state domain.}
+\end{frame}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{Eight qubits, nine symmetric patterns}
+\begin{itemize}
+\item Symmetric patterns distinguish the number of ones: $r=0,\ldots,8$.
+\item $|D_8^r\rangle$ equally superposes all weight-$r$ strings.
+\item This nine-dimensional space is the spin-$j=4$ space.
+\item Retain $t$ qubits: $\rho_t$ lies in a symmetric space of dimension $t+1$.
+\end{itemize}
+\[\text{Uniform reference:}\quad I/(t+1).\]
+\note{The reference is uniform on the symmetric space, not on all $2^t$ dimensions. A density matrix is positive semidefinite with trace one. For diagonal states, its entries are a probability list.}
+\end{frame}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{Turning distance into a score}
+\[ A_t(\rho)=1-\frac{\|\rho_t-I/(t+1)\|_1}{K_t}. \]
+\[ K_t=\frac{2t}{t+1},\qquad 1\leq t\leq N. \]
+\begin{itemize}
+\item For diagonal Hermitian differences: sum absolute deviations.
+\item A smaller distance means a larger score.
+\item $K_t$ is the maximum distance over all density matrices.
+\end{itemize}
+\note{The trace norm is unhalved. Express the eigenvalue vector as a convex combination of probability-simplex vertices. Convexity gives $2t/(t+1)$, attained at every vertex. Order $t=0$ is excluded.}
+\end{frame}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{What does covariance require?}
+A completely positive, trace-preserving channel $\Phi$ satisfies
+\[\Phi(UXU^\dagger)=U\Phi(X)U^\dagger\]
+for every matrix $X$ and every spin rotation $U$.
+\medskip
+
+Denis, Lacaille, Martin and Serrano-Ens\'astiga proposed (T4):
+\[A_t(\Phi(\rho))\geq A_t(\rho).\]
+\small arXiv:2605.29436v1, Sections II.B and III.A.2.
+\note{Rotating before the noise equals rotating afterwards. Complete positivity includes positivity with an untouched auxiliary system. The source left the trace-distance proof open. Its full mixed-state range is $1\leq t\leq N$.}
+\end{frame}
+\section{Mechanism}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{Building admissible noise}
+Let $J_x,J_y,J_z$ be spin-four operators, $\sum_aJ_a^2=20I$.
+\[Q_{ab}=\tfrac12(J_aJ_b+J_bJ_a)-\tfrac{20}{3}\delta_{ab}I.\]
+\[\Phi(X)=\frac3{770}\sum_{a,b}Q_{ab}XQ_{ab}.\]
+\begin{itemize}
+\item Normalization: $\sum_{a,b}Q_{ab}^2=(770/3)I$.
+\item A rotation acts by an orthogonal matrix on each index.
+\item Summing both indices proves covariance by orthogonality.
+\end{itemize}
+\note{The Kraus operators are $\sqrt{3/770}Q_{ab}$, giving complete positivity. Their normalization proves trace preservation; covariance alone is not used to assume it. The appendix gives the general-spin identity.}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{One probability list is enough}
+\[\rho=\operatorname{diag}(p),\]
+\[p=v/1764,\quad
+\begin{aligned}v=(&209,92,560,0,441,\\&0,294,168,0).\end{aligned}\]
+\begin{itemize}
+\item Nonnegative, sums to one; multiple positive entries make it mixed.
+\item The channel output is diagonal too.
+\item Discard one qubit: there are two ways to retain $k$ ones.
+\end{itemize}
+\[p_k^{(7)}=\frac{8-k}{8}p_k+\frac{k+1}{8}p_{k+1},\quad 0\leq k\leq7.\]
+\note{Start with $k$ ones and discard a zero, or start with $k+1$ ones and discard a one. Symmetry makes the probability of discarding a one its fraction of all qubits. This is the exact partial trace, not a classical approximation.}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{Compare the eight-entry reductions}
+\small
+\[p^{(7)}=\frac{(21,21,40,21,21,21,21,2)}{168}.\]
+\[q^{(7)}=v/517440,\quad\text{where}\]
+\[\begin{aligned}v=(&69468,87252,64205,82635,\\&78360,59892,43533,32095).\end{aligned}\]
+\normalsize
+\[D_{\mathrm{in}}=\frac{19}{84},\qquad
+D_{\mathrm{out}}=\frac{3933}{17248}.\]
+Uniform numerators: $21$ and $64680$, respectively.
+\note{Six input entries are uniform; the remaining two deviate by $19/168$ each. For the output subtract $64680/517440$ entry by entry and sum absolute values; the numerator is $117990$.}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{The exact sign}
+\begin{bookresult}{exact-decrease}
+The displayed channel is CP, TP and rotation covariant; the input is a mixed density matrix, and
+\[A_7(\Phi(\rho))-A_7(\rho)=-\frac{95}{90552}<0.\]
+\end{bookresult}
+\[D_{\mathrm{out}}-D_{\mathrm{in}}=\frac{95}{51744}>0.\]
+Multiply by $-1/K_7=-4/7$.
+\note{This written theorem includes the explicit state, channel admissibility and exact decrement. The public Lean theorem directly states the universal negation and is cited separately next, preserving its exact scope.}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{What does the formal theorem say?}
+\begin{bookresult}{universal-refutation}
+The following universal assertion is false: for every $N\geq1$, $1\leq t\leq N$, every CP/TP rotation-covariant channel and every density matrix,
+\[A_t(\rho)\leq A_t(\Phi(\rho)).\]
+\end{bookresult}
+\small The witness predates this paper in the upstream proof; the paper reconstructs it by tensors.
+\note{The variables $N,t$ are integers. Reduction is ordinary qubit partial trace in normalized Dicke coordinates. The formal normalizer is the supremum of distances. The inspected proof already contains witness admissibility and exact reduced distances.}
+\end{frame}
+\section{Scope}
+% Manuscript: Section 4; reading statements.md
+\begin{frame}{Why this does not contradict contraction}
+\begin{itemize}
+\item Contraction: two states on the same space, under the same channel.
+\item Here: act on nine levels, then take an eight-level reduction.
+\item Covariance supplies no channel acting only on reduced states.
+\end{itemize}
+\begin{block}{Two controls}
+Mixtures of rotations: monotone at every order.\\
+Full order $t=N$: covariance fixes the uniform state, so contraction applies.
+\end{block}
+\note{Rotations pass through partial trace; then use convexity and unitary invariance. At full order, irreducibility and trace preservation fix the uniform state; positivity and trace preservation give trace-norm contraction for Hermitian matrices.}
+\end{frame}
+% Manuscript: Section 4; reading statements.md
+\begin{frame}{One witness, two scores}
+\begin{bookresult}{sibling-orders}
+The fidelity candidate strictly increases at every $t=1,\ldots,8$. The trace-distance candidate strictly increases at $t=1,\ldots,6,8$ and strictly decreases at $t=7$.
+\end{bookresult}
+\[A_t^F(\sigma)=\frac{(\operatorname{Tr}\sqrt{\sigma_t})^2-1}{t}.\]
+\small Fidelity signs use rational square-root enclosures.
+
+This example leaves universal fidelity (T4) unsettled.
+\note{Every change is output minus input. Strict positivity follows from positive rational lower bounds. Passing this witness does not establish fidelity monotonicity for all states.}
+\end{frame}
+% Manuscript: Section 4; reading statements.md
+\begin{frame}{What remains to ask?}
+\begin{itemize}
+\item Is trace distance monotone for mixed states restricted to $t\leq N/2$?
+\item Can pure inputs violate it in the usual range $t\leq j$?
+\item What are the minimum spin and order of a violation?
+\end{itemize}
+\medskip
+This witness: $j=4$, $t=7$, mixed input.\\
+\small Existing purity and Hilbert--Schmidt results stand. The convex-roof proposition's total-score hypothesis fails here.
+\note{These questions remain unsettled by the example; missing formalization does not create them. A conditional proposition cannot be applied when its hypothesis fails, which does not refute the conditional proposition.}
+\end{frame}
+\appendix
+\section{Details}
+% Manuscript: Lemma 1, Section 2
+\begin{frame}{General quadrupole identity}
+\begin{bookresult}{quadrupole-normalization}
+For Hermitian spin operators, $\sum_aJ_a^2=CI$, $C=j(j+1)$.
+\[\sum_{a,b}Q_{ab}^2=\frac{C(4C-3)}6I.\]
+\end{bookresult}
+\[\sum_aJ_aJ_bJ_a=(C-1)J_b.\]
+\[\sum_{a,b}S_{ab}^2=\tfrac12(C(C-1)+C^2)I.\]
+\[\sum_{a,b}Q_{ab}^2=(C^2-C/2-C^2/3)I.\]
+\note{Assume Hermitian spin commutators and $\sum_aJ_a^2=CI$. Sum the double commutators to obtain $2J_b$, then subtract the scalar trace part. Spins zero and one-half give zero: the identity holds but cannot normalize a channel by division.}
+\end{frame}
+% Manuscript: Proposition 1, Table 1
+\begin{frame}{Certificates for eight orders}
+\centering\small
+\begin{tabular}{rcc}
+$t$ & $\Delta A_t$ & $10^6\Delta A_t^F\geq$\\\hline
+1 & $19/784$ & 3663\\
+2 & $4275/120736$ & 8574\\
+3 & $2831/75460$ & 13085\\
+4 & $4959/241472$ & 18296\\
+5 & $741/75460$ & 26268\\
+6 & $19/2464$ & 38910\\
+7 & $-95/90552$ & 62258\\
+8 & $3889/17248$ & 365375
+\end{tabular}
+\note{For each order use the binomial formula for the diagonal reduction. Put $s=10^{15}$ and $n(p)=\lfloor\sqrt{\lfloor s^2p\rfloor}\rfloor$, so $n(p)/s\leq\sqrt p<(n(p)+1)/s$. Summing gives $L,U$; the fidelity change is at least $(L_{\Phi(\rho)}^2-U_\rho^2)/t$. The final column floors one million times these rational lower bounds.}
+\end{frame}
+% Manuscript: bibliography and attribution
+\begin{frame}{Sources}
+\footnotesize
+\begin{itemize}
+\item H. Ma and W. Zhang, version 4, \href{https://doi.org/10.5281/zenodo.23884885}{doi:10.5281/zenodo.23884885}.
+\item J. Denis, T. Lacaille, J. Martin and E. Serrano-Ens\'astiga, \emph{Total, quantum, and classical measures of anticoherence for mixed spin states}, arXiv:2605.29436v1, II.B, III.A.2--3.
+\item D. Baguette and J. Martin, Phys. Rev. A 96, 032304 (2017).
+\item T. Aschieri, B. Ruba and J. P. Solovej, Commun. Math. Phys. 405, 298 (2024).
+\end{itemize}
+\note{The paper reconstructs the existing upstream witness. Complete written arguments and the related DOIs are in the reading edition.}
+\end{frame}
+\FormalVerification
+\end{document}

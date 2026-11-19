@@ -1,0 +1,197 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{对称噪声与七体反相干性的反例}
+\author{Haobo Ma \and Wenlin Zhang}
+\begin{document}
+% Manuscript: title and exact version DOI
+\begin{frame}
+\titlepage
+\note{论文第 4 版，DOI 10.5281/zenodo.23884885。题目指向迹距离候选量的混合态范围。}
+\end{frame}
+% Manuscript: Sections 1--4
+\begin{frame}{路线}
+\tableofcontents
+\note{先解释问题和概率，再建立信道与反例，最后讨论适用范围。}
+\end{frame}
+\section{问题}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{一个小下降，推翻一个全称断言}
+\begin{itemize}
+\item 问题：尊重所有旋转的噪声，会让状态更没有方向性吗？
+\item 回答：对迹距离评分，不一定。
+\item 自旋四混合态，保留七个比特：
+\end{itemize}
+\[A_7(\Phi(\rho))-A_7(\rho)=-\frac{95}{90552}<0.\]
+\small Haobo Ma 与 Wenlin Zhang，论文第 4 版。
+\note{先给出问题与答案。微小的严格负值也足以反驳普遍不等式。这里输入是混合态，阶数七在完整混合态定义允许的范围内。}
+\end{frame}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{从八个比特到九个模式}
+\begin{itemize}
+\item 对称模式只区分 1 的个数：$r=0,\ldots,8$。
+\item $|D_8^r\rangle$ 是所有重量为 $r$ 的字符串的等幅叠加。
+\item 九维对称空间等价于自旋 $j=4$ 的空间。
+\item 保留 $t$ 个比特，得到 $\rho_t$，位于 $t+1$ 维对称空间。
+\end{itemize}
+\[\text{均匀基准：}\quad I/(t+1).\]
+\note{这里的基准在对称空间中均匀，不是在整个 $2^t$ 维空间中均匀。密度矩阵半正定且迹为一。对角态的对角元就是概率列表。}
+\end{frame}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{把距离变成评分}
+\[ A_t(\rho)=1-\frac{\|\rho_t-I/(t+1)\|_1}{K_t}. \]
+\[ K_t=\frac{2t}{t+1},\qquad 1\leq t\leq N. \]
+\begin{itemize}
+\item 对角厄米差矩阵：迹范数是绝对偏差之和。
+\item 距离更小，评分更大。
+\item $K_t$ 是所有密度矩阵到基准的最大距离。
+\end{itemize}
+\note{归一化用不减半的迹范数。特征值向量是概率单纯形顶点的凸组合，凸性给出上界 $2t/(t+1)$，纯态顶点取到它。$t=0$ 不在定义范围。}
+\end{frame}
+% Manuscript: Section 1; reading statements.md
+\begin{frame}{协变性要求什么？}
+完全正、保迹的信道 $\Phi$ 满足
+\[\Phi(UXU^\dagger)=U\Phi(X)U^\dagger\]
+对每个矩阵 $X$ 及每个自旋旋转 $U$ 成立。
+\medskip
+
+Denis、Lacaille、Martin 与 Serrano-Ensástiga 的 (T4) 要求
+\[A_t(\Phi(\rho))\geq A_t(\rho).\]
+\small arXiv:2605.29436v1，第 II.B 节，第 III.A.2 节。
+\note{先旋转再加噪声等于先加噪声再旋转。完全正性还要求附加不受操作的辅助系统后保持正性。原作者把迹距离情形的证明留为开放问题；这里使用混合态完整范围 $1\leq t\leq N$。}
+\end{frame}
+\section{机制}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{怎样得到合法的噪声？}
+令 $J_x,J_y,J_z$ 为自旋四算子，$\sum_aJ_a^2=20I$。
+\[Q_{ab}=\tfrac12(J_aJ_b+J_bJ_a)-\tfrac{20}{3}\delta_{ab}I.\]
+\[\Phi(X)=\frac3{770}\sum_{a,b}Q_{ab}XQ_{ab}.\]
+\begin{itemize}
+\item 归一化：$\sum_{a,b}Q_{ab}^2=(770/3)I$。
+\item 旋转将两个指标分别乘以同一个正交矩阵。
+\item 全部指标求和后，正交性给出协变性。
+\end{itemize}
+\note{$\sqrt{3/770}Q_{ab}$ 是 Kraus 算子，因此完全正。归一化恒等式证明保迹，不是仅凭协变性假定保迹。附录给出一般自旋恒等式。}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{只需看一个概率列表}
+\[\rho=\operatorname{diag}(p),\]
+\[p=v/1764,\quad
+\begin{aligned}v=(&209,92,560,0,441,\\&0,294,168,0).\end{aligned}\]
+\begin{itemize}
+\item 非负、和为一；多个正项保证混合态。
+\item 信道输出也对角。
+\item 丢弃一个比特，有两种来源：
+\end{itemize}
+\[p_k^{(7)}=\frac{8-k}{8}p_k+\frac{k+1}{8}p_{k+1},\quad 0\leq k\leq7.\]
+\note{原来有 $k$ 个一且丢弃零，或者原来有 $k+1$ 个一且丢弃一。对称性使丢弃一的概率等于一所占比例。这个公式是精确偏迹，不是经典近似。}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{比较八项约化分布}
+\small
+\[p^{(7)}=\frac{(21,21,40,21,21,21,21,2)}{168}.\]
+\[q^{(7)}=v/517440,\quad\text{其中}\]
+\[\begin{aligned}v=(&69468,87252,64205,82635,\\&78360,59892,43533,32095).\end{aligned}\]
+\normalsize
+\[D_{\mathrm{in}}=\frac{19}{84},\qquad
+D_{\mathrm{out}}=\frac{3933}{17248}.\]
+均匀基准分子分别为 $21$ 与 $64680$。
+\note{输入有六项已经均匀，其余两项各偏离 $19/168$。输出逐项减去 $64680/517440$ 后取绝对值，分子总和是 $117990$。}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{精确的符号}
+\begin{bookresult}{exact-decrease}
+上述信道完全正、保迹且旋转协变，输入为混合密度矩阵，并有
+\[A_7(\Phi(\rho))-A_7(\rho)=-\frac{95}{90552}<0.\]
+\end{bookresult}
+\[D_{\mathrm{out}}-D_{\mathrm{in}}=\frac{95}{51744}>0.\]
+再乘 $-1/K_7=-4/7$。
+\note{这页的书面定理包含明确状态、信道合法性与精确下降等式。公开 Lean 定理直接陈述的是全称命题为假，另在下一页引用，避免把更宽的陈述放入同一验证块。}
+\end{frame}
+% Manuscript: Sections 2--3; reading statements.md
+\begin{frame}{形式定理说了什么？}
+\begin{bookresult}{universal-refutation}
+下述全称断言为假：对每个 $N\geq1$、$1\leq t\leq N$、每个完全正保迹的旋转协变信道和每个密度矩阵，
+\[A_t(\rho)\leq A_t(\Phi(\rho)).\]
+\end{bookresult}
+\small 见证已存在于上游证明；本文给出自足的张量重建。
+\note{变量 $N,t$ 为整数。约化是普通比特偏迹，以归一化 Dicke 基表示。归一化量在形式定义中是最大距离的上确界。已检查源码中包含见证合法性及精确约化距离。}
+\end{frame}
+\section{范围}
+% Manuscript: Section 4; reading statements.md
+\begin{frame}{为什么不违反迹距离收缩？}
+\begin{itemize}
+\item 收缩原则：同一空间、同一信道作用于两个状态。
+\item 本例先作用于九维系统，再取八维约化。
+\item 协变性没有给出只作用于约化态的合法信道。
+\end{itemize}
+\begin{block}{两个对照}
+旋转的概率混合：所有阶数单调。\\
+完整阶数 $t=N$：协变性固定均匀态，故单调。
+\end{block}
+\note{旋转穿过偏迹，然后用凸性和酉不变性。完整阶数时不可约性与保迹性保证均匀态固定，再用正性与保迹性证明厄米矩阵的迹范数收缩。}
+\end{frame}
+% Manuscript: Section 4; reading statements.md
+\begin{frame}{同一见证，两个评分}
+\begin{bookresult}{sibling-orders}
+保真度候选量在每个 $t=1,\ldots,8$ 严格上升。迹距离候选量在 $t=1,\ldots,6,8$ 严格上升，在 $t=7$ 严格下降。
+\end{bookresult}
+\[A_t^F(\sigma)=\frac{(\operatorname{Tr}\sqrt{\sigma_t})^2-1}{t}.\]
+\small 保真度的正号由有理平方根区间认证。
+
+本例没有解决保真度的普遍 (T4)。
+\note{所有变化量均为输出减输入。严格的正号来自正的有理下界。不能从一个见证通过保真度检验推出所有状态都通过。}
+\end{frame}
+% Manuscript: Section 4; reading statements.md
+\begin{frame}{仍然可以问什么？}
+\begin{itemize}
+\item 混合态限制到 $t\leq N/2$ 时，迹距离是否单调？
+\item 纯输入、通常范围 $t\leq j$，能否出现违反？
+\item 最小反例自旋与阶数是多少？
+\end{itemize}
+\medskip
+本例：$j=4$、$t=7$、混合输入。\\
+\small 纯度与 Hilbert--Schmidt 的既有结果不受反驳。凸屋顶命题的总评分前提在此失败。
+\note{这些是本例没有解决的问题，不是由缺少形式化而制造的新猜想。条件命题不能用于前提失败的情况，这并不反驳条件命题本身。}
+\end{frame}
+\appendix
+\section{推导}
+% Manuscript: Lemma 1, Section 2
+\begin{frame}{一般四极恒等式}
+\begin{bookresult}{quadrupole-normalization}
+厄米自旋算子满足 $\sum_aJ_a^2=CI$，$C=j(j+1)$。
+\[\sum_{a,b}Q_{ab}^2=\frac{C(4C-3)}6I.\]
+\end{bookresult}
+\[\sum_aJ_aJ_bJ_a=(C-1)J_b.\]
+\[\sum_{a,b}S_{ab}^2=\tfrac12(C(C-1)+C^2)I.\]
+\[\sum_{a,b}Q_{ab}^2=(C^2-C/2-C^2/3)I.\]
+\note{前提是厄米自旋算子的交换关系与 $\sum_aJ_a^2=CI$。双重交换子求和等于 $2J_b$。减去迹部分得到结论。自旋零与二分之一给零，恒等式成立但不能除以零归一化。}
+\end{frame}
+% Manuscript: Proposition 1, Table 1
+\begin{frame}{八个阶数的证书}
+\centering\small
+\begin{tabular}{rcc}
+$t$ & $\Delta A_t$ & $10^6\Delta A_t^F\geq$\\\hline
+1 & $19/784$ & 3663\\
+2 & $4275/120736$ & 8574\\
+3 & $2831/75460$ & 13085\\
+4 & $4959/241472$ & 18296\\
+5 & $741/75460$ & 26268\\
+6 & $19/2464$ & 38910\\
+7 & $-95/90552$ & 62258\\
+8 & $3889/17248$ & 365375
+\end{tabular}
+\note{每个阶数先用二项式公式取对角约化。令 $s=10^{15}$，$n(p)=\lfloor\sqrt{\lfloor s^2p\rfloor}\rfloor$，则 $n(p)/s\leq\sqrt p<(n(p)+1)/s$。相加得到 $L,U$，保真度变化至少为 $(L_{\Phi(\rho)}^2-U_\rho^2)/t$。最后一列是有理下界乘以一百万后向下取整。}
+\end{frame}
+% Manuscript: bibliography and attribution
+\begin{frame}{来源}
+\footnotesize
+\begin{itemize}
+\item H. Ma and W. Zhang, version 4, \href{https://doi.org/10.5281/zenodo.23884885}{doi:10.5281/zenodo.23884885}.
+\item J. Denis, T. Lacaille, J. Martin and E. Serrano-Ens\'astiga, \emph{Total, quantum, and classical measures of anticoherence for mixed spin states}, arXiv:2605.29436v1, II.B, III.A.2--3.
+\item D. Baguette and J. Martin, Phys. Rev. A 96, 032304 (2017).
+\item T. Aschieri, B. Ruba and J. P. Solovej, Commun. Math. Phys. 405, 298 (2024).
+\end{itemize}
+\note{论文重建既有上游见证。完整书面证明和相关 DOI 列于阅读版。}
+\end{frame}
+\FormalVerification
+\end{document}

@@ -1,0 +1,28 @@
+{
+  "results": {
+    "universal-refutation": {
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "Exact public result : ¬ claim. Expanding claim quantifies N>=1, 1<=t<=N, every complex-linear CP/TP spin-SU(2)-covariant map and every positive semidefinite trace-one matrix. reducedState is ordinary partial trace in normalized Dicke coordinates; normalizer is the supremum of the unhalved trace norm over all density matrices. The out-of-range t>N definition is irrelevant under t<=N. This mapped consequence of manuscript Theorem 1 is distinct from its explicit witness and exact decrement."
+    },
+    "exact-decrease": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "Manuscript Theorem 1 states the explicit Cartesian channel, mixed density matrix and exact normalized change -95/90552. Public result proves the universal negation, so is a variant, not the complete explicit statement. Actual source/frozen state includes private witness_state, witness_channel, cartesian_channel, witness_output, input_reduction, output_reduction, input_distance=19/84 and output_distance=3933/17248. Their theorem membership is retained; privacy is not absence of proof. normalizer_positive gives a lower bound 7/4 and positivity, not the equality K_7=7/4. Request 250 asks to reuse those prerequisites and add the exact normalized consequence and public interface, without rebuilding the witness. The two s1 mappings are, respectively, the negation consequence and the full explicit theorem."
+    },
+    "quadrupole-normalization": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "Manuscript Lemma 1 is the general Hermitian spin/Casimir identity sum Q_ab^2=C(4C-3)I/6, including zero coefficient at spins 0 and 1/2. Searched full pinned D5 source by anticoherence, quadrupole, identity/normalizer shape and inspected related AnticoherenceSpinCovariance plus the complete refutation module/frozen state. Fixed-spin kraus_complete and cartesian_channel already handle the witness, but do not state the general-C identity. No matching declaration found in this search; request is independent of the exact-decrease task."
+    },
+    "sibling-orders": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "Manuscript Proposition 1 covers both candidates for all t=1,...,8 with strict signs. Existing private source proves the t=7 trace-distance sign and fixed output/reductions, but no inspected declaration states the full all-order trace/fidelity comparison. There is no compared public GID for the bundled result. The book reproduces Table 1 and rational sqrt enclosure proof. Request 252 reuses the existing construction; only additional orders/fidelity signs and optional exact table normalization remain. No universal fidelity conclusion is asserted."
+    }
+  }
+}

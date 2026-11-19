@@ -1,0 +1,27 @@
+{
+  "duration": "3:02",
+  "id": "001-symmetry-and-distance",
+  "lean": [],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance_001_cover.jpg",
+    "narrated_720p": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-16",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "A spin-four counterexample explained through symmetric patterns, exact partial trace and two probability histograms.",
+  "summary_zh": "用对称模式、精确偏迹和两个概率直方图解释自旋四反例。",
+  "title": "When symmetric noise increases reduced distance",
+  "title_zh": "对称噪声为什么仍能拉远局部距离"
+}

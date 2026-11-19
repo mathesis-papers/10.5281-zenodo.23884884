@@ -1,0 +1,13 @@
+kind = "academic"
+editions = ["zh", "en"]
+aspect = "4:3"
+structure_colour = "#0e2c8e"
+short_author = "H. Ma, W. Zhang"
+short_title = "Covariance and reduction"
+institution = "Haobo Ma: Chrono AI, Singapore; Wenlin Zhang: NUS and Chrono AI, Singapore"
+date = "16 November 2026"
+navigation_symbols = false
+
+[title]
+zh = "对称噪声与七体反相干性的反例"
+en = "Symmetric noise and a seven-qubit counterexample"

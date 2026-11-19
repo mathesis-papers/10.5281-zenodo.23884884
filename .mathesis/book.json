@@ -1,0 +1,55 @@
+{
+  "book": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance",
+  "pending_claims": [],
+  "results": {
+    "universal-refutation": {
+      "claim": "collected:denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance:4:s1",
+      "gids": [
+        "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.result"
+      ],
+      "comparison_verdict": "same",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8"
+    },
+    "exact-decrease": {
+      "claim": "collected:denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance:4:s1",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/AnticoherenceTraceDistanceRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Theorem 1 — exact normalized decrease",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/250"
+      }
+    },
+    "quadrupole-normalization": {
+      "claim": "collected:denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance:4:s2",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Lemma 1 — general quadrupole normalization",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/251"
+      }
+    },
+    "sibling-orders": {
+      "claim": "collected:denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance:4:s3",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Proposition 1 — all-order signs",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/252"
+      }
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga",
+    "zh": "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga"
+  },
+  "version": 4,
+  "work": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance"
+}

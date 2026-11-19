@@ -1,0 +1,177 @@
+{
+  "voice": "af_heart",
+  "speed": 0.98,
+  "say": {
+    "qubits": "cue bits",
+    "qubit": "cue bit",
+    "Ma": "Mah"
+  },
+  "music": {
+    "bpm": 84,
+    "progression": "d-minor"
+  },
+  "scenes": [
+    {
+      "id": "question",
+      "name": "THE QUESTION",
+      "lead": 0.9,
+      "tail": 0.8,
+      "music": [
+        0.22,
+        0.1,
+        0.08,
+        0.03,
+        0.02
+      ],
+      "lines": [
+        [
+          "Can noise that respects every spatial rotation make a quantum state less directionless? For one trace-distance score, the answer is yes.",
+          "尊重每一种空间旋转的噪声，能让量子态更有方向性吗？对一种迹距离评分，答案是能。"
+        ],
+        [
+          "The example is a mixed spin-four state. Its order-seven score falls by exactly ninety-five over ninety thousand five hundred fifty-two.",
+          "例子是一个自旋四的混合态；它的七阶评分精确下降九十五除以九万零五百五十二。"
+        ],
+        [
+          "A universal rule says the score never falls. One exact negative change is enough to defeat that rule.",
+          "普遍规则要求评分永不下降；一次精确的负变化就足以推翻它。"
+        ]
+      ]
+    },
+    {
+      "id": "patterns",
+      "name": "EIGHT QUBITS",
+      "lead": 0.9,
+      "tail": 0.8,
+      "music": [
+        0.22,
+        0.1,
+        0.08,
+        0.03,
+        0.02
+      ],
+      "lines": [
+        [
+          "Think of eight identical two-level quantum systems, called qubits. In their symmetric space, the number of ones labels nine basic patterns.",
+          "设想八个相同的二能级量子系统，也就是量子比特。在对称空间中，一的个数标记九种基本模式。"
+        ],
+        [
+          "Keep seven qubits and discard one. The retained space has eight patterns, and the uniform reference assigns one eighth to each.",
+          "保留七个比特，丢掉一个。保留的空间有八种模式，均匀基准给每一种分配八分之一。"
+        ],
+        [
+          "For our diagonal states, distance means adding absolute deviations from one eighth. The score is one minus this distance divided by seven quarters.",
+          "对本例的对角态，距离是各项偏离八分之一的绝对值之和。评分是一减去这个距离除以四分之七。"
+        ]
+      ]
+    },
+    {
+      "id": "reduction",
+      "name": "DISCARD ONE",
+      "lead": 0.9,
+      "tail": 0.8,
+      "music": [
+        0.22,
+        0.1,
+        0.08,
+        0.03,
+        0.02
+      ],
+      "lines": [
+        [
+          "To keep exactly k ones, start with k and discard a zero, or start with k plus one and discard a one.",
+          "要保留恰好 k 个一，可以原来有 k 个一而丢掉零，或者原来有 k 加一个一而丢掉一。"
+        ],
+        [
+          "Symmetry makes these probabilities simple fractions. This formula is the exact quantum partial trace for a diagonal symmetric state.",
+          "对称性使这些概率成为简单分数。这个公式是对角对称态的精确量子偏迹。"
+        ],
+        [
+          "The input reduction has six entries already uniform. The remaining two deviate by nineteen over one hundred sixty-eight in opposite directions.",
+          "输入约化态有六项已经均匀，另外两项向相反方向各偏离一百六十八分之十九。"
+        ]
+      ]
+    },
+    {
+      "id": "channel",
+      "name": "SYMMETRIC NOISE",
+      "lead": 0.9,
+      "tail": 0.8,
+      "music": [
+        0.22,
+        0.1,
+        0.08,
+        0.03,
+        0.02
+      ],
+      "lines": [
+        [
+          "The channel is built from quadratic spin operators, summed over every Cartesian direction. It is completely positive, trace preserving, and rotation covariant.",
+          "信道由二次自旋算子构成，对全部笛卡尔方向求和。它完全正、保迹，并且旋转协变。"
+        ],
+        [
+          "Covariance means rotating before the noise gives the same answer as rotating afterwards. The normalization identity separately guarantees total probability one.",
+          "协变性是说，先旋转再加噪声与先加噪声再旋转结果相同；归一化恒等式另行保证总概率为一。"
+        ],
+        [
+          "This is a channel on all nine spin levels. It need not induce a channel that acts only on the eight retained levels.",
+          "这是作用在全部九个自旋能级上的信道；它不一定诱导出只作用在八个保留能级上的信道。"
+        ]
+      ]
+    },
+    {
+      "id": "distance",
+      "name": "THE EXACT SIGN",
+      "lead": 0.9,
+      "tail": 0.8,
+      "music": [
+        0.22,
+        0.1,
+        0.08,
+        0.03,
+        0.02
+      ],
+      "lines": [
+        [
+          "Now compare the input and output reductions with the same uniform reference. Some entries move closer, others farther away.",
+          "现在将输入与输出约化态同一个均匀基准比较。有些项靠近，有些项远离。"
+        ],
+        [
+          "The input distance is nineteen over eighty-four. The output distance is three thousand nine hundred thirty-three over seventeen thousand two hundred forty-eight.",
+          "输入距离是八十四分之十九；输出距离是一万七千二百四十八分之三千九百三十三。"
+        ],
+        [
+          "The distance increases by exactly ninety-five over fifty-one thousand seven hundred forty-four. Dividing by seven quarters and subtracting from one makes the score decrease.",
+          "距离精确增加九十五除以五万一千七百四十四。再除以四分之七并从一减去，评分就下降了。"
+        ]
+      ]
+    },
+    {
+      "id": "scope",
+      "name": "WHAT WE LEARN",
+      "lead": 0.9,
+      "tail": 0.8,
+      "music": [
+        0.22,
+        0.1,
+        0.08,
+        0.03,
+        0.02
+      ],
+      "lines": [
+        [
+          "There is no contradiction with trace-distance contraction. That principle needs the same channel on the same space; covariance alone does not supply a channel on the reduced space.",
+          "这不违背迹距离收缩。收缩原则要求同一空间上的同一信道；协变性本身没有提供约化空间上的信道。"
+        ],
+        [
+          "Mixtures of rotations do obey the proposed rule. So does the full order, where no qubits are discarded. Our witness lives between those two controls.",
+          "旋转的概率混合确实满足所提规则。不丢弃比特的完整阶数也满足它。本见证位于这两个对照之间。"
+        ],
+        [
+          "The witness was already present in the upstream formal proof. Ma and Zhang reconstruct it exactly. Pure inputs, restricted lower orders, and universal fidelity monotonicity remain separate questions.",
+          "见证已经存在于上游形式化证明。Ma 与 Zhang 对它作了精确重建。纯输入、受限低阶以及保真度的普遍单调性，仍是不同的问题。"
+        ]
+      ]
+    }
+  ]
+}
