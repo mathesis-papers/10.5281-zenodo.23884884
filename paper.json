@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 77377,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "3d7598ee5a99a29ff963e4e4cbb6588a4709258edd552feb4707deb731027c42",
       "sha256": "3d7598ee5a99a29ff963e4e4cbb6588a4709258edd552feb4707deb731027c42"
     },
     "source": {
       "bytes": 18540,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "3348000be59f47cf185efbb70419f585656f0bd3a2a9746f7fa173b0a4f4cc52",
       "sha256": "3348000be59f47cf185efbb70419f585656f0bd3a2a9746f7fa173b0a4f4cc52"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 77377,
+      "sha256": "3d7598ee5a99a29ff963e4e4cbb6588a4709258edd552feb4707deb731027c42",
       "url": "/api/v1/collected-papers/denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance/files/pdf?version=4"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance",
     "repository_name": "10.5281-zenodo.23884884",
     "source": {
+      "bytes": 18540,
+      "sha256": "3348000be59f47cf185efbb70419f585656f0bd3a2a9746f7fa173b0a4f4cc52",
       "url": "/api/v1/collected-papers/denis-lacaille-martin-serrano-ensastiga-2026-anticoherence-trace-distance/files/source?version=4"
     },
     "title": "Refuting the trace-distance case of axiom (T4) of Denis, Lacaille, Martin and Serrano-Ensástiga",
